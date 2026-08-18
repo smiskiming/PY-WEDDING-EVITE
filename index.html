@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Wedding of Pairin &amp; Yolanda</title>
+<meta name="description" content="You are invited to the wedding of Yolanda & Pairin, 31 October 2026, St. Faith Church, Kenyalang, Kuching.">
+<link rel="icon" href="assets/images/PY front icon.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= OPENING / ENVELOPE SCREEN ================= -->
+<section id="opening-screen" class="opening-screen">
+  <div class="opening-bg" style="background-image:url('assets/images/PY\ front\ icon.jpeg')"></div>
+  <div class="opening-overlay"></div>
+  <div class="opening-content">
+    <p class="opening-label">The Wedding Of</p>
+    <h1 class="opening-names"><span>Pairin</span> &amp; <span>Yolanda</span></h1>
+    <p class="opening-date">31 . 10 . 2026</p>
+    <button id="open-invite-btn" class="btn-open">
+      <span class="envelope-icon">&#9993;</span>
+      Open Invitation
+    </button>
+  </div>
+</section>
+
+<!-- ================= MAIN INVITATION ================= -->
+<div id="main-invite" class="main-invite hidden">
+
+  <!-- Music toggle -->
+  <button id="music-toggle" class="music-toggle" aria-label="Toggle background music">
+    <span class="music-icon spinning">&#9835;</span>
+  </button>
+  <audio id="bg-audio" loop preload="none">
+    <source src="wedding song/Turning Page (Instrumental).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Hero -->
+  <header class="hero" style="background-image:url('assets/images/PY\ second\ icon.jpeg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-animate>
+      <p class="hero-label">We Are Getting Married</p>
+      <h1 class="hero-names">Pairin <span class="amp">&amp;</span> Yolanda</h1>
+      <p class="hero-date">Saturday, 31st October 2026</p>
+    </div>
+  </header>
+
+  <!-- Greeting -->
+  <section class="section greeting" data-animate>
+    <p class="greeting-text">
+      With hearts full of joy and gratitude, we invite you to witness and celebrate
+      the beginning of our forever.
+    </p>
+    <p class="greeting-verse">
+      &ldquo;Place me like a seal over your heart, like a seal on your arm for love is as strong as death, it's jealousy unyielding as the grave. It burns like a blazing fire, like a mighty flame
+
+Many waters cannot quench love : rivers cannot sweep it away. If one were to give all the wealth of one's house for love, it would utterly scorned.&rdquo;
+      <br><span class="verse-ref">Songs of Solomon 8 : 6 - 7</span>
+    </p>
+  </section>
+
+  <!-- Event Details -->
+  <section id="event-section" class="section event" data-animate>
+    <p class="section-eyebrow">Save The Date</p>
+    <h2 class="section-title">Wedding Ceremony</h2>
+
+    <div class="event-cards">
+      <div class="event-card">
+        <span class="event-icon">&#128197;</span>
+        <h3>Date</h3>
+        <p>Saturday<br>31 October 2026</p>
+        <a id="add-to-calendar" class="btn-map" href="#">
+          <i class="fa-regular fa-calendar-plus"></i> Add to Calendar
+        </a>
+      </div>
+      <div class="event-card">
+        <span class="event-icon">&#128337;</span>
+        <h3>Time</h3>
+        <p>8:30 AM &ndash; 12:00 PM</p>
+      </div>
+      <div class="event-card venue-card">
+        <span class="event-icon">&#9962;</span>
+        <h3>Venue</h3>
+        <p>St. Faith Church<br>Kenyalang, Kuching</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=St.+Faith+Church+Kenyalang+Kuching" 
+           target="_blank" 
+           rel="noopener" 
+           class="btn-map">
+          <i class="fa-solid fa-map-location-dot"></i> View Map
+        </a>
+      </div>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-container">
+      <p class="countdown-label">Counting Down To Our Special Day</p>
+      <div class="countdown-timer" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-value" id="days">00</span>
+          <span class="countdown-text">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="hours">00</span>
+          <span class="countdown-text">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="minutes">00</span>
+          <span class="countdown-text">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="seconds">00</span>
+          <span class="countdown-text">Seconds</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event Flow / Timeline -->
+    <div class="event-flow-container">
+      <div class="event-flow-header">
+        <span class="event-flow-script">Event</span>
+        <p class="event-flow-big">FLOW</p>
+      </div>
+      <div class="event-flow-list">
+        <div class="flow-item">
+          <span class="flow-time">8:30 AM</span>
+          <span class="flow-heart">&#9829;</span>
+          <span class="flow-activity">Arrival Of Guests</span>
+        </div>
+        <div class="flow-item">
+          <span class="flow-time">9:00 AM</span>
+          <span class="flow-heart">&#9829;</span>
+          <span class="flow-activity">Wedding Ceremony</span>
+        </div>
+        <div class="flow-item">
+          <span class="flow-time">11:00 AM</span>
+          <span class="flow-heart">&#9829;</span>
+          <span class="flow-activity">Photo Session</span>
+        </div>
+        <div class="flow-item">
+          <span class="flow-time">12:00 PM</span>
+          <span class="flow-heart">&#9829;</span>
+          <span class="flow-activity">Wedding Lunch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery-section" class="section gallery" data-animate>
+    <p class="section-eyebrow">Our Moments</p>
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid" id="gallery-grid">
+      <img src="assets/images/1000469066.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/front.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1000468877.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1O1A8343 copy.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1000468878.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1000468879.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1000467773.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1000470134.jpg.jpeg" alt="Yolanda and Pairin">
+      <img src="assets/images/1000467775.jpg.jpeg" alt="Yolanda and Pairin">
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp-section" class="section rsvp" data-animate>
+    <p class="section-eyebrow">Kindly Respond</p>
+    <h2 class="section-title">RSVP</h2>
+    <p class="rsvp-text">
+      Your presence would mean the world to us. Please let us know if you can join us on our special day.
+    </p>
+    <div class="rsvp-button-container">
+      <a class="btn-rsvp" href="https://forms.gle/AgKXZFoNfR1c5vYd8" target="_blank" rel="noopener">
+        RSVP Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact-section" class="section contact" data-animate>
+    <p class="section-eyebrow">Get In Touch</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <h3>Yolanda</h3>
+        <p class="contact-role">Bride</p>
+        <a class="btn-outline" href="https://wa.me/qr/T7ROG66FPDUDC1" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <div class="contact-card">
+        <h3>Pairin</h3>
+        <p class="contact-role">Groom</p>
+        <a class="btn-outline" href="https://wa.me/qr/63MPMRBGPU6XL1" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Love Gift -->
+  <section id="gift-section" class="section love-gift" data-animate>
+    <p class="section-eyebrow">Your Blessing</p>
+    <h2 class="section-title">Love Gift</h2>
+    <p class="love-gift-text">
+      Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, we would be grateful.
+    </p>
+    <div class="love-gift-button-container">
+      <button id="show-gift-btn" class="btn-gift">
+        <i class="fa-solid fa-gift"></i> View Gift Details
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-animate>
+    <p class="footer-names">Pairin &amp; Yolanda</p>
+    <p class="footer-hashtag">#Yo'sPai💍</p>
+    <p class="footer-note">With love, we thank you for being part of our story.</p>
+  </footer>
+</div>
+
+<!-- Bottom Navigation Bar -->
+<nav id="bottom-nav" class="bottom-nav hidden">
+  <a href="#event-section" class="nav-item" data-section="event">
+    <i class="fa-regular fa-calendar"></i>
+    <span>Event</span>
+  </a>
+  <a href="#gallery-section" class="nav-item" data-section="gallery">
+    <i class="fa-regular fa-images"></i>
+    <span>Gallery</span>
+  </a>
+  <a href="#rsvp-section" class="nav-item" data-section="rsvp">
+    <i class="fa-solid fa-envelope-open-text"></i>
+    <span>RSVP</span>
+  </a>
+  <a href="#gift-section" class="nav-item" data-section="gift">
+    <i class="fa-solid fa-gift"></i>
+    <span>Gift</span>
+  </a>
+  <a href="#contact-section" class="nav-item" data-section="contact">
+    <i class="fa-regular fa-address-book"></i>
+    <span>Contact</span>
+  </a>
+</nav>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
+  <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous">&#10094;</button>
+  <img id="lightbox-img" src="" alt="">
+  <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next">&#10095;</button>
+</div>
+
+<!-- Love Gift Modal -->
+<div id="gift-modal" class="gift-modal">
+  <button id="gift-modal-close" class="gift-modal-close" aria-label="Close">&times;</button>
+  <div class="gift-modal-content">
+    <img id="gift-img" src="assets/images/PY QR.jpeg" alt="Love Gift Details">
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
